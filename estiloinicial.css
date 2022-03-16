@@ -131,54 +131,138 @@ h2 {
     margin: 10px 10px;
 }
 
-.base_graf_Em_Busca {
-    width: 400px;
-    /*tamanho lateral do gráfico*/
-    background-color: rgba(240, 248, 255, 0);
-    height: 200px;
-    position: relative;
-    left: 22vh;
-    top: -340px;
-    /*altura do gráfico, proporcional a 10 itens*/
+.area {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-.Busca_nome {
-    width: 15%;
-    background-color: rgba(250, 235, 215, 0);
-    height: 20px;
-    /*se alterar altura, alterar também altura da tabela*/
-    float: left;
-    position: relative;
-    left: 22vh;
-    top: -200px;
+.area button {
+    margin: 0 10px;
+    border-radius: 3px;
+    border: 1px solid #9a28fc;
+    padding: 3px 6px;
+    color: #9a28fc;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.Busca_valor {
-    width: 85%;
-    background-color: rgba(173, 216, 230, 0);
-    height: 20px;
-    /*altura igual a da classe Busca_nome*/
-    float: right;
-    position: relative;
-    left: 22vh;
-    top: -200px;
-}
-
-.Busca_nome_centralizado {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    font-size: 14px;
-    color: #2b2b2e;
-}
-
-.insert_busca_width {
-    background-color: rgb(134, 0, 243);
-    height: 14px;
+.area button:hover {
+    border: 1px solid white;
     color: white;
+}
+
+
+/** Here comes the chart*/
+
+.chart {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #222;
+    overflow: hidden;
+}
+
+.chart .radio_chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.chart .radio_chart.animate {
+    animation-name: circled;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    -moz-animation-name: circled;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-name: circled;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    background: #a200ff;
+}
+
+.chart .cap {
+    border-top: #666 3px solid;
+    border-left: #666 2px solid;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: scale(.8);
+    background-color: #333;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+}
+
+.chart .value {
+    color: white;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 300%;
+    top: 37.5%;
+    position: absolute;
+    text-shadow: -2px -2px 5px #9a28fc, 2px 2px 5px #9a28fc, 0 0 50px #9a28fc;
+}
+
+
+/* The animation based on an hexagon
+  * its make the radial anim effet
+  */
+
+@keyframes circled {
+    0% {
+        clip-path: polygon(100% 0, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 50% 50%);
+    }
+    25% {
+        clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%);
+    }
+    50% {
+        clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 100%, 0 100%, 50% 50%);
+    }
+    75% {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%, 0 0, 50% 50%);
+    }
+    100% {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 100% 0, 50% 50%);
+    }
+}
+
+@-webkit-keyframes circled {
+    0% {
+        -webkit-clip-path: polygon(100% 0, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 50% 50%);
+    }
+    25% {
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%);
+    }
+    50% {
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 100%, 0 100%, 50% 50%);
+    }
+    75% {
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%, 0 0, 50% 50%);
+    }
+    100% {
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 100% 0, 50% 50%);
+    }
+}
+
+@-moz-keyframes circled {
+    0% {
+        clip-path: polygon(100% 0, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 50% 50%);
+    }
+    25% {
+        clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 50%);
+    }
+    50% {
+        clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 100%, 0 100%, 50% 50%);
+    }
+    75% {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%, 0 0, 50% 50%);
+    }
+    100% {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0, 100% 0, 50% 50%);
+    }
 }
