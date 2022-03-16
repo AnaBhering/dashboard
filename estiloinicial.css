@@ -80,29 +80,105 @@ nav a {
 }
 
 .dsup {
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-}
-
-#mensal {
-    padding: 5px;
+    width: 270px;
+    height: 100px;
+    margin: 10px 10px;
     background-color: #444c4c;
+    padding: 5px;
     border-radius: 5px;
     text-align: center;
     color: #f4f4f9;
     -webkit-box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.77);
     -moz-box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.77);
     box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.77);
+    display: inline-block;
+    position: relative;
+    left: 40vh;
 }
 
-#hoje {
+h2 {
     padding: 5px;
+    color: #f4f4f9;
+    position: relative;
+    left: 43vh;
+    top: 8px;
+}
+
+.dmed {
     background-color: #444c4c;
+    padding: 5px;
     border-radius: 5px;
     text-align: center;
     color: #f4f4f9;
-    -webkit-box-shadow: 7px 5px 3pxrgba(0, 0, 0, 0.77);
+    -webkit-box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.77);
     -moz-box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.77);
     box-shadow: 7px 5px 3px rgba(0, 0, 0, 0.77);
+    display: inline-block;
+    position: relative;
+    left: 40vh;
+    height: 250px;
+}
+
+#m1,
+#m3 {
+    width: 770px;
+    margin: 10px 10px;
+}
+
+#m2,
+#m4 {
+    width: 377px;
+    margin: 10px 10px;
+}
+
+.base_graf_Em_Busca {
+    width: 400px;
+    /*tamanho lateral do gráfico*/
+    background-color: rgba(240, 248, 255, 0);
+    height: 200px;
+    position: relative;
+    left: 22vh;
+    top: -340px;
+    /*altura do gráfico, proporcional a 10 itens*/
+}
+
+.Busca_nome {
+    width: 15%;
+    background-color: rgba(250, 235, 215, 0);
+    height: 20px;
+    /*se alterar altura, alterar também altura da tabela*/
+    float: left;
+    position: relative;
+    left: 22vh;
+    top: -200px;
+}
+
+.Busca_valor {
+    width: 85%;
+    background-color: rgba(173, 216, 230, 0);
+    height: 20px;
+    /*altura igual a da classe Busca_nome*/
+    float: right;
+    position: relative;
+    left: 22vh;
+    top: -200px;
+}
+
+.Busca_nome_centralizado {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 14px;
+    color: #2b2b2e;
+}
+
+.insert_busca_width {
+    background-color: rgb(134, 0, 243);
+    height: 14px;
+    color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
 }
